@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="script.js">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function computerPlay(langPref)
+        {
+            return langPref[Math.floor(Math.random()*langPref.length)];
+        }
+
+        function playRound(playerSelection, computerSelection)
+        {
+            //tie
+            if (playerSelection.toUpperCase() === computerSelection.toUpperCase())
+            {
+                    return console.log("Tie")
+            }
+            //Rock
+            if (playerSelection.toUpperCase() === langPref[0]) 
+            {
+                if (computerSelection === langPref[2])
+                {
+                    console.log("You Win!");
+                }
+                if (computerSelection === langPref[1])
+                {
+                    console.log("You Lose!");
+                }
+            }
+            //Paper
+            if (playerSelection.toUpperCase() === langPref[1]) 
+            {
+                if (computerSelection === langPref[0])
+                {
+                    console.log("You Win!");
+                }
+                if (computerSelection === langPref[2])
+                {
+                    console.log("You Lose!");
+                }
+            }
+            //Scissors
+            if (playerSelection.toUpperCase() === langPref[2]) 
+            {
+                if (computerSelection === langPref[1])
+                {
+                    console.log("You Win!");
+                }
+                if (computerSelection === langPref[0])
+                {
+                    console.log("You Lose!");
+                }
+            }
+        }
+
+        function game()
+        {
+            for (let i = 0; i < 5; i++)
+            {
+                playRound(playerSelection, computerSelection);
+            }
+        }
+
+        const choicesEn = ["ROCK", "PAPER", "SCISSORS"];
+        const choicesSp = ["Piedra", "Papel", "Tijeras"];
+        const choicesTg = ["Bato", "Papel", "Gunting"];
+
+        //const input = prompt("Which language would you like to pay in?");
+        let langChoices = prompt("English, Spanish, or Tagalog");
+
+        if (langChoices.toUpperCase() === "ENGLISH")
+        {
+            langPref = choicesEn;
+            let playerSelection = prompt("Rock, Paper, or Scissors");
+            const computerSelection = computerPlay(langPref);
+            game();
+        }
+        if (langChoices.toUpperCase() === "SPANISH")
+        {
+            langPref = choicesSp;
+            let playerSelection = prompt("Piedra, Papel, o Tijeras");
+            const computerSelection = computerPlay(langPref);
+            game();
+        }
+        if (langChoices.toUpperCase() === "TAGALOG")
+        {
+            langPref = choicesTg;
+            let playerSelection = prompt("Bato, Papel, o Gunting");
+            const computerSelection = computerPlay(langPref);
+            game();
+        }
+        
+    </script>
+</body>
+</html>
