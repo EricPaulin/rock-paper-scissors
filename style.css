@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+button {
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.streak {
+    color: red;
+}
+
+.options {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 15px;
+}
