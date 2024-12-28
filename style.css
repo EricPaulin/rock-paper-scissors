@@ -1,3 +1,14 @@
+* {
+    background-color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 30px;
+    font-size: 35px;
+}
+
 body {
     margin: 0;
     width: 100vw;
@@ -7,13 +18,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    text-align: center;
 }
 
 button {
     height: 35px;
     width: 100px;
     cursor: pointer;
+    border: solid;
+}
+
+.choices > button {
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    border-width: 3px;
+    border-radius: 100px;
+    margin: 0 8px;
 }
 
 .streak {
@@ -22,7 +43,12 @@ button {
 
 .options {
     position: absolute;
-    right: 0;
+    right: 50;
     bottom: 0;
-    margin: 15px;
+    margin: 20px;
+}
+
+.options > button {
+    width: 105px;
+    height: 40px;
 }
