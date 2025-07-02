@@ -23,4 +23,4 @@ This was my first time making any kind of game, so I thought the best way to lea
 </p>
 
 
-### Play Here -> 
+### Play Here -> [Rock,Paper,Scissors](https://ericpaulin.github.io/rock-paper-scissors/)
